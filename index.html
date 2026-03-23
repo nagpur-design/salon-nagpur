@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nagpur Salon</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Salon",
+      "name": "Nagpur Salon",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nagpur",
+        "addressLocality": "Nagpur",
+        "addressRegion": "Maharashtra",
+        "postalCode": "440001",
+        "telephone": "xxxxxxxxx"
+      },
+      "telephone": "xxxxxxxxx",
+      "email": ""
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nagpur Salon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Experience the Best Salon in Nagpur</h1>
+      <p>Get ready to experience the ultimate salon experience in Nagpur. Our expert stylists and technicians will make you look and feel your best.</p>
+      <button class="btn btn-primary">Book an Appointment</button>
+    </div>
+    <div class="hero-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://emojis.wiki/unicode/274C.png);"></div>
+  </header>
+  <main>
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5>Hair Cutting</h5>
+                <p>Get a haircut that suits your style and preferences.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5>Hair Styling</h5>
+                <p>Get the perfect hairstyle with our expert stylists.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5>Nail Care</h5>
+                <p>Get the perfect nail care with our expert technicians.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Nagpur Salon is a leading salon in Nagpur, providing the best hair and beauty services to our clients.</p>
+        <p>We are a team of expert stylists and technicians who are dedicated to providing the best experience to our clients.</p>
+      </div>
+    </section>
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonial">
+              <p>"I had a great experience at Nagpur Salon. The stylists were very friendly and did an excellent job."</p>
+              <p>- John Doe</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial">
+              <p>"I was impressed by the quality of service at Nagpur Salon. The technicians were very skilled and did an excellent job."</p>
+              <p>- Jane Doe</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial">
+              <p>"I had a wonderful experience at Nagpur Salon. The staff was very friendly and welcoming."</p>
+              <p>- Bob Smith</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <form id="contact-form" action="https://formspree.io/f/xbdzenyd" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+          <p id="success-message" style="display: none;">Message sent successfully!</p>
+          <p id="error-message" style="display: none;">Error sending message. Please try again.</p>
+        </form>
+      </div>
+    </section>
+    <section id="location" class="section location">
+      <div class="container">
+        <h2>Find Us</h2>
+        <div id="map" style="width: 100%; height: 300px;"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>About Us</h2>
+          <p>Nagpur Salon is a leading salon in Nagpur, providing the best hair and beauty services to our clients.</p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Contact Us</h2>
+          <p>Phone: xxxxxxxxx</p>
+          <p>WhatsApp: 91xxxxxxxxx</p>
+          <p>Email: </p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Social Media</h2>
+          <p>Follow us on social media to stay updated on our latest offers and services:</p>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">Twitter</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
