@@ -1,162 +1,185 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.sticky-nav .nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.sticky-nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sticky-nav .nav-links li {
+    margin-right: 1rem;
+}
+
+.sticky-nav .nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sticky-nav .nav-links a:hover {
+    color: #666;
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://emojis.wiki/unicode/274C.png);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+    background: linear-gradient(to bottom, #ffd700, #ff9900);
+    padding: 5rem;
+    text-align: center;
+    color: #fff;
 }
 
-.hero-content {
-  text-align: center;
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.sticky-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #fff;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
+.cta {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+.cta:hover {
+    background-color: #444;
 }
 
 .services {
-  padding: 2rem;
-  background-color: #f7f7f7;
+    padding: 5rem;
+    text-align: center;
 }
 
-.services .card {
-  margin-bottom: 1rem;
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.services .card .card-body {
-  padding: 1rem;
+.service-card {
+    background-color: #f7f7f7;
+    padding: 2rem;
+    margin: 1rem;
+    width: calc(33.33% - 2rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about {
-  padding: 2rem;
+    padding: 5rem;
+    text-align: center;
 }
 
 .testimonials {
-  padding: 2rem;
+    padding: 5rem;
+    text-align: center;
 }
 
-.testimonial {
-  padding: 1rem;
-  border-left: 5px solid #ddd;
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.testimonial p {
-  margin-bottom: 0.5rem;
+.testimonial-card {
+    background-color: #f7f7f7;
+    padding: 2rem;
+    margin: 1rem;
+    width: calc(33.33% - 2rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact {
-  padding: 2rem;
+    padding: 5rem;
+    text-align: center;
 }
 
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#contact-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.contact-form button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-.location {
-  padding: 2rem;
-}
-
-.location #map {
-  height: 300px;
-  width: 100%;
+#contact-form button[type="submit"]:hover {
+    background-color: #444;
 }
 
 .footer {
-  padding: 2rem;
-  background-color: #f7f7f7;
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
 }
 
-.footer .container {
-  padding: 1rem;
+.footer-info {
+    margin-bottom: 1rem;
 }
 
-.footer .row {
-  margin-bottom: 1rem;
+.whatsapp-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
 }
 
-.whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.whatsapp-button:hover {
-  background-color: #2ecc71;
-}
-
-.whatsapp-icon {
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fade-in 1s ease-in-out;
+.whatsapp-btn:hover {
+    background-color: #2ecc71;
 }
